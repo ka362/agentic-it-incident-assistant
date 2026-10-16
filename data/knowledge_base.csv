@@ -1,0 +1,6 @@
+kb_id,error_code,cause,resolution
+KB101,DB_CONNECTION_TIMEOUT,Database connection timed out,Check database connectivity and restart the connection pool
+KB102,CONNECTION_POOL_EXHAUSTED,Database connection pool is exhausted,Restart the connection pool and check active connections
+KB103,SERVICE_UNAVAILABLE,Dependent service is unavailable,Check dependent service health and restart if required
+KB104,AUTH_TOKEN_EXPIRED,Authentication token has expired,Refresh the authentication token
+KB105,MEMORY_THRESHOLD_EXCEEDED,Application memory usage exceeded threshold,Restart the application and investigate memory usage

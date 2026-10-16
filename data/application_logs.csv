@@ -1,0 +1,7 @@
+log_id,application,level,error_code,message,timestamp
+LOG001,Payment API,ERROR,DB_CONNECTION_TIMEOUT,Database connection timed out,2026-10-03 10:15
+LOG002,Payment API,INFO,,Payment request received successfully,2026-10-03 10:16
+LOG003,Claims API,ERROR,SERVICE_UNAVAILABLE,Downstream claims service unavailable,2026-10-03 10:20
+LOG004,Customer Portal,ERROR,AUTH_TOKEN_EXPIRED,Authentication token expired,2026-10-03 10:25
+LOG005,Billing API,INFO,,Billing service running normally,2026-10-03 10:30
+LOG006,Payment API,ERROR,CONNECTION_POOL_EXHAUSTED,Database connection pool exhausted,2026-10-03 10:35

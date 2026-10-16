@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agentic IT Incident Assistant</title>
+    <style>
+        body { font-family: Arial; max-width: 750px; margin: 50px auto; }
+        button { padding: 10px 20px; cursor: pointer; }
+        select { padding: 10px; }
+        pre { background: #f2f2f2; padding: 20px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h2>Agentic IT Incident Assistant</h2>
+
+    <select id="application">
+        <option>Payment API</option>
+        <option>Claims API</option>
+        <option>Customer Portal</option>
+        <option>Billing API</option>
+    </select>
+
+    <button onclick="investigate()">Investigate</button>
+
+    <h3>Investigation Result</h3>
+    <pre id="result">Select an application and click Investigate.</pre>
+
+    <script>
+        async function investigate() {
+            const application = document.getElementById("application").value;
+            const result = document.getElementById("result");
+
+            result.textContent = "Investigating...";
+
+            try {
+                const response = await fetch("/investigate", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ application_name: application })
+                });
+
+                if (!response.ok) {
+                    throw new Error("API error: " + response.status);
+                }
+
+                const data = await response.json();
+                result.textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                result.textContent = "Error: " + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

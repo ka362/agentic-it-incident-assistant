@@ -1,0 +1,5 @@
+application,status,response_time_ms,last_checked
+Payment API,UP,220,2026-09-27 18:30
+Claims API,DEGRADED,1850,2026-09-27 18:30
+Customer Portal,DOWN,0,2026-09-27 18:30
+Billing API,UP,310,2026-09-27 18:30
